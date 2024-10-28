@@ -50,7 +50,7 @@ namespace calculator
     public class Calculator
     {
         // ---------- TODO ----------
-
+        
         // --------------------
     }
 }
@@ -60,5 +60,30 @@ namespace calculator
 Enter an expression (ex. 2 + 3):
 >> 4 * 3
 Result: 12
+
+*/
+
+
+/* example output (CHALLANGE)
+
+Enter an expression (ex. 2 + 3):
+>> 4 ** 3
+Result: 64
+
+Enter an expression (ex. 2 + 3):
+>> 5 ** -2
+Result: 0.04
+
+Enter an expression (ex. 2 + 3):
+>> 12 G 15
+Result: 3
+
+Enter an expression (ex. 2 + 3):
+>> 12 L 15
+Result: 60
+
+Enter an expression (ex. 2 + 3):
+>> 12 % 5
+Result: 2
 
 */

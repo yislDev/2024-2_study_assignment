@@ -23,32 +23,26 @@ namespace statistics
             
             // --------------------
         }
-
-        // fold 함수
-        static T fold<T>(int now, int ed, T accu, Func<int, T, T> func)
-        {
-            if (now == ed) return accu;
-            else return fold(now + 1, ed, func(now, accu), func);
-        }
     }
 }
 
 /* example output
+
 Average Scores: 
-Math: 70.00
-Science: 67.80
-English: 68.40
+Math: 84.40
+Science: 86.80
+English: 86.20
 
 Max and min Scores: 
-Math: (94, 79)
-Science: (90, 76)
+Math: (94, 72)
+Science: (95, 76)
 English: (92, 78)
 
-Students sorted by total score:
-Charlie: 252
-Alice: 253
-Eve: 256
-David: 262
-Bob: 264
+Students rank by total scores:
+Alice: 2nd
+Bob: 5th
+Charlie: 1st
+David: 4th
+Eve: 3rd
 
 */

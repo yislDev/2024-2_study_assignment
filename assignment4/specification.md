@@ -4,6 +4,8 @@
 
 명세를 잘 읽어보시고, example output을 참고하여 구현해주세요.
 
+4-1, 4-2, 4-3 중 2개의 과제만 제출하시면 됩니다.
+
 <br/>
 
 TODO 파트를 구현하여 제출하세요.
@@ -46,9 +48,36 @@ public double Calculate(double num1, string op, double num2);
 
 <br/>
 
+유효하지 않은 연산자에 대해 InvalidOperationException을 반환합니다.
+
+throw new InvalidOperationException("Invalid operator");
+
+<br/>
+
 / 연산에서 DivideByZeroException을 반환합니다.
 
 throw new DivideByZeroException("Division by zero is not allowed");
+
+### CHALLANGE
+
+새로운 연산이 추가됩니다. 형변환이 필요할 시 명시적 형변환을 사용합니다.
+<br/>
+
+(double)a ** (int)b
+
+: a의 b제곱을 반환합니다. b는 정수라 가정하고, 음수도 가능합니다.
+
+(int)a % (int)b
+
+: a를 b로 나눈 나머지를 반환합니다. a, b는 정수라 가정합니다.
+
+(int)a G (int)b
+
+: a와 b의 최대공약수를 반환합니다. a, b는 정수라 가정합니다.
+
+(int)a L (int)b
+
+: a와 b의 최소공배수를 반환합니다. a, b는 정수라 가정합니다.
 
 ## Assignment 4-2 Star
 
@@ -108,7 +137,7 @@ stdCount는 총 학생 수입니다.
 
 1. 각 과목의 평균 점수
 2. 각 과목의 (최대, 최소) 점수
-3. 학생 이름과 총점 (오름차순 정렬)
+3. 학생 이름과 총점에 따른 등수
 
 <br/>
 
