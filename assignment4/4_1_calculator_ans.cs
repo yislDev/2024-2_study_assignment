@@ -50,7 +50,50 @@ namespace calculator
     public class Calculator
     {
         // ---------- TODO ----------
-        
+        public double Calculate (double num1, string op, double num2) {
+            switch (op) {
+                case "+":
+                    return num1 + num2;
+                case "-":
+                    return num1 - num2;
+                case "/":
+                    if (num2 == 0) {
+                        throw new DivideByZeroException();
+                    } else {
+                        return num1 / num2;
+                    }
+                case "%":
+                    if (num2 == 0) {
+                        throw new DivideByZeroException();
+                    } else {
+                        return num1 - num2 * (double)((int)num1 / (int)num2);
+                    }
+                case "*":
+                    return num1 * num2;
+                case "**":
+                    double res = 1;
+                    if (num2 >= 0) {
+                        for (int i = 0; i < (int)num2; i++) {
+                            res *= num1;
+                        }
+                    } else {
+                        for (int i = 0; i > (int)num2; i--) {
+                            res /= num1;
+                        }
+                    }
+                    return res;
+                case "G":
+                    double big = (num1 > num2) ? num1 : num2;
+                    double small = (num1 > num2) ? num2 : num1;
+                    if (small == 0) return big;
+                    else {
+                        return Calculate(small, "G", (Calculate(big, "%", small)));
+                    }
+                case "L":
+                    return (num1 * num2 / Calculate(num1, "G", num2));
+                default: throw new InvalidOperationException();
+            }
+        }
         // --------------------
     }
 }
